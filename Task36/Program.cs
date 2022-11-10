@@ -19,10 +19,20 @@ int OddSumm(int[] array)
 {
     int[] arr = array;
     int summ = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i%2 != 0) summ = arr[i] + summ;
+    }
+    return summ;
+}
+
+int OddNumbersSumm (int [] array)
+{
+    int[] arr = array;
+    int summ = 0;
     foreach (int el in arr)
     {
-        if (el % 2 != 0)
-            summ = el + summ;
+        if (el%2 != 0) summ = summ + el; 
     }
     return summ;
 }
@@ -47,7 +57,7 @@ Console.Clear();
 int[] RandArray = RandomArray(10, 1, 10);
 Console.WriteLine();
 Console.WriteLine();
-Console.WriteLine($"Сумма нечётных чисел в этом массиве равна {OddSumm(RandArray)}\n");
-if (Ratio(RandArray) == true) Console.WriteLine("Кстати, нечётных чисел в этом массиве получилось больше, чем чётных");
-else Console.WriteLine("Кстати, нечётных чисел в этом массиве получилось меньше, чем чётных");
+Console.WriteLine($"Сумма чисел, стоящих на нечётных позициях, в этом массиве равна {OddSumm(RandArray)}\n");
+if (Ratio(RandArray) == true) Console.WriteLine($"Кстати, нечётных чисел в этом массиве получилось больше, чем чётных. Их сумма {OddNumbersSumm(RandArray)} :)");
+else Console.WriteLine($"Кстати, нечётных чисел в этом массиве получилось меньше, чем чётных. Их сумма {OddNumbersSumm(RandArray)} :)");
 Console.WriteLine();
