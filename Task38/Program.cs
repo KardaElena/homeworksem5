@@ -13,32 +13,32 @@ double[] RandomArray(int size, int min, int max)
     return array;
 }
 
-double MinValue (double[] array)
+double MinValue(double[] array)
 {
-    double [] arr = array;
+    double[] arr = array;
     double value = array[0];
     for (int i = 1; i < array.Length; i++)
     {
-        if (array[i] < value) value = array[i]; 
+        if (array[i] < value) value = array[i];
     }
-return value;
+    return value;
 }
 
-double MaxValue (double[] array)
+double MaxValue(double[] array)
 {
-    double [] arr = array;
+    double[] arr = array;
     double value = array[0];
     for (int i = 1; i < array.Length; i++)
     {
-        if (array[i] > value) value = array[i]; 
+        if (array[i] > value) value = array[i];
     }
-return value;
+    return value;
 }
 
 Console.Clear();
-double [] array = RandomArray(10, 1, 10);
+double[] array = RandomArray(10, 1, 10);
 double min = MinValue(array);
 double max = MaxValue(array);
 double diff = max - min;
 Console.WriteLine();
-Console.WriteLine ($"\nРазница между максимумом и минимумом в этом массиве равна {diff}\n");
+Console.WriteLine($"\nРазница между максимумом и минимумом в этом массиве равна {diff}\n");
