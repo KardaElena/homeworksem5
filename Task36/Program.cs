@@ -21,18 +21,18 @@ int OddSumm(int[] array)
     int summ = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (i%2 != 0) summ = arr[i] + summ;
+        if (i % 2 != 0) summ = arr[i] + summ;
     }
     return summ;
 }
 
-int OddNumbersSumm (int [] array)
+int OddNumbersSumm(int[] array)
 {
     int[] arr = array;
     int summ = 0;
     foreach (int el in arr)
     {
-        if (el%2 != 0) summ = summ + el; 
+        if (el % 2 != 0) summ = summ + el;
     }
     return summ;
 }

@@ -14,15 +14,15 @@ int[] GetArray(int size, int a, int b)
     return arr;
 }
 
-int EvenNumbers(int [] array)
+int EvenNumbers(int[] array)
 {
-    int [] arr = array;
+    int[] arr = array;
     int count = 0;
     foreach (int el in arr)
     {
-        if (el%2 == 0)
+        if (el % 2 == 0)
         {
-        count++;
+            count++;
         }
     }
     return count;
